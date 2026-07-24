@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: findroom-server
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false
